@@ -1,0 +1,42 @@
+============================================================
+实验二补充：MobileNetV2 / ShuffleNetV2 消融实验
+============================================================
+
+=== 新增模型参数量 ===
+  MobileNetV2(无SE): 27,210 参数
+  MobileNetV2(有SE): 28,218 参数
+  ShuffleNetV2(无shuffle): 18,666 参数
+  ShuffleNetV2(有shuffle): 18,666 参数
+
+--- MobileNetV2 注意力机制对比 ---
+
+--- 训练 MobileNetV2(无SE) ---
+  耗时: 680.3s, 最终测试准确率: 0.6386, 参数量: 27,210
+
+--- 训练 MobileNetV2(有SE) ---
+  耗时: 845.1s, 最终测试准确率: 0.6500, 参数量: 28,218
+  [saved] mobilenet_attention_comparison.png
+
+--- ShuffleNetV2 通道洗牌对比 ---
+
+--- 训练 ShuffleNetV2(无shuffle) ---
+  耗时: 430.2s, 最终测试准确率: 0.6051, 参数量: 18,666
+
+--- 训练 ShuffleNetV2(有shuffle) ---
+  耗时: 334.0s, 最终测试准确率: 0.5883, 参数量: 18,666
+  [saved] shufflenet_shuffle_comparison.png
+  [saved] mobile_shuffle_bar_comparison.png
+
+============================================================
+补充实验汇总
+============================================================
+
+--- MobileNetV2 注意力机制 ---
+  MobileNetV2(无SE): 测试准确率=0.6386, 参数量=27,210, 耗时=680.3s
+  MobileNetV2(有SE): 测试准确率=0.6500, 参数量=28,218, 耗时=845.1s
+
+--- ShuffleNetV2 通道洗牌 ---
+  ShuffleNetV2(无shuffle): 测试准确率=0.6051, 参数量=18,666, 耗时=430.2s
+  ShuffleNetV2(有shuffle): 测试准确率=0.5883, 参数量=18,666, 耗时=334.0s
+
+补充实验完成!
