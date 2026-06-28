@@ -1,0 +1,18 @@
+# 忽略所有文件和目录
+*
+
+# 只包含四个实验目录下的所有文件
+!Experiment-1/**
+!Experiment-2/**
+!Experiment-3/**
+!Experiment-4/**
+
+# 确保实验目录本身也被包含
+!Experiment-1/
+!Experiment-2/
+!Experiment-3/
+!Experiment-4/
+
+# 仓库说明文件
+!.gitignore
+!README.md
